@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Wordle</title>
+        <style>
+
+            .yellow {
+                background: yellow;
+            }
+
+            .green {
+                background: green;
+            }
+
+            .red {
+                background: red;
+            }
+            
+            @keyframes error {
+                0% {
+                    transform: translateX(0);
+                }
+                25% {
+                    transform: translateX(-10px);
+                }
+                50% {
+                    transform: translateX(10px);
+                    color: red;
+                }
+                75% {
+                    transform: translateX(-10px);
+                }
+                100% {
+                    transform: translateX(0);
+                }
+            }
+            
+            body {
+                font-family: monospace;
+            }
+            
+            .game {
+                width: 40vw;
+                margin: auto;
+                box-shadow: 0 0 10px lightgrey;
+                border-radius: 10px;
+                padding: 30px;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+            }
+
+            h1 {
+                text-align: center;
+            }
+
+            .guesses {
+                font-size: 4em;
+                letter-spacing: 10px;
+                
+                
+
+            }
+
+            #guess {
+                width: 90%;
+                margin: auto;
+                margin-top: 20px;
+                padding: 5px;
+                font-size: 2em;
+                font-family: monospace;
+                text-align: center;
+                border-radius: 10px;
+                border: 1px solid seagreen;
+            }
+            
+            #restart {
+                display: block;
+                margin: auto;
+                margin-top: 20px;
+                padding: 10px;
+                font-size: 2em;
+                font-family: monospace;
+                text-align: center;
+                border-radius: 5px;
+                border: none;
+                background: seagreen;
+                color: white;
+                box-shadow: 0 5px 5px lightgrey;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <h1>Definetly Not Wordle</h1>
+        <h1 id="won" style="display: none; color: green; font-size: 4em;">You Win</h1>
+        <h1 id="lose" style="display: none; color: red; font-size: 4em;">Sorry You Lose</h1>
+    
+        </div>
+        <div class="game">
+            <div class="guesses">
+                
+                <div class="guessbox" id="1"></div>
+                <div class="guessbox" id="2"></div>
+                <div class="guessbox" id="3"></div>
+                <div class="guessbox" id="4"></div>
+                <div class="guessbox" id="5"></div>
+                <div class="guessbox" id="7"></div>
+            
+            </div>
+
+            <input id="guess">
+        </div>
+        <button id="restart" onClick="location.reload();">Restart</button>
+        
+
+        <script src="main.js" type="module"></script>
+        
+        
+    </body>
+</html>
